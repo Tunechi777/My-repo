@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - amazon
 on:
   push:
     branches:
-      - main
+      - 'main'
   workflow_dispatch:
 
 jobs:
@@ -63,9 +63,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3499E7A6AF474F358B41690CBCC73643 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8F81609452F94DC0B0277F68C07F93F2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7B6524CDD8FE4899B2022426D2056471 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C31F6ACC21234A5F988A24E56057830D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1DC15639FC6E48688B6239F39873B2D3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9C38C2A74B5040CD8F900A0616F2869F }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
